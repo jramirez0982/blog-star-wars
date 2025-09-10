@@ -11,7 +11,7 @@ export const Navbar = () => {
 	const [classIcon, setClassIcon] = useState("")
 
 	return (
-		<nav className="navbar navbar-light bg-light">
+		<nav className="navbar navbar-light bg-light sticky-top">
 			<div className="container d-flex align-items-center">
 				<Link to="/" className="d-flex align-items-center">
 					<img
