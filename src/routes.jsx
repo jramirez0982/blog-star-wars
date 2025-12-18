@@ -2,6 +2,7 @@
 
 import {
     createBrowserRouter,
+    createHashRouter,
     createRoutesFromElements,
     Route,
 } from "react-router-dom";
@@ -14,7 +15,7 @@ import { PlanetDescription } from "./pages/PlanetDescription";
 import { StarshiptDescription } from "./pages/StarshipDescription";
 
 
-export const router = createBrowserRouter(
+export const router = createHashRouter(
     createRoutesFromElements(
     // CreateRoutesFromElements function allows you to build route elements declaratively.
     // Create your routes here, if you want to keep the Navbar and Footer in all views, add your new routes inside the containing Route.
@@ -34,5 +35,8 @@ export const router = createBrowserRouter(
         <Route path="/starship-description/:id" element={<StarshiptDescription />} />
         
       </Route>
-    )
+    ),
+    {
+      //basename: "/blog-star-wars",
+    }
 );
